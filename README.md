@@ -15,8 +15,13 @@ This program will prompt the user to enter a word. The program will then prompt 
 | Prompt user to enter a word | Food | *Food* |
 | Check to ensure word is a string | Food | *word is a string* |
 | Prompt user to enter a string of words | Food is great | *Food is great* |
-| Check to ensure the input is a string | Food is great | ** |
-| Prompt user to enter a string of words | Food is great | You entered: *Food is great* |
+| Check to ensure the input is a string | Food is great | *phrase is a string* |
+| Check each word in the phrase for special characters | Food is great | *whitespace characters exist* |
+| If special characters are found, handle them | Food is great! | *set whitespace as delimiter, remove '!'* |
+| Allow for numerical characters | Food is great! 123 | *Read '123' as if it were a string* |
+| Search each word for multiple occurences and update a counter for each occurence | Food is great | *'Food' was found 1 time* |
+| Display findings to the user | Food is great | The word Food was found 1 time(s) in the phrase you entered. |
+
 
 ## Setup on OSX
 
@@ -38,7 +43,7 @@ This program will prompt the user to enter a word. The program will then prompt 
 
 ## Links
 
-* Add links here
+* https://github.com/protatodev/WordCounter
 
 ## License
 
