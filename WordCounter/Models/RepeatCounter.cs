@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WordCounter.Models
 {
-    class Words
+    class RepeatCounter
     {
     }
 }

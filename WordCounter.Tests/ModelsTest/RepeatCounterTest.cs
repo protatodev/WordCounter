@@ -3,11 +3,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class RepeatCounterTest
     {
+        string word = "";
+
         [TestMethod]
-        public void TestMethod1()
+        public string GetWord()
         {
+            return word;
         }
     }
 }
