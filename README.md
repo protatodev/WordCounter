@@ -6,7 +6,7 @@
 
 ## Description
 
-This program will prompt the user to enter a word. The program will then prompt the user to enter a string and will display how many times the word they entered appears in the string. The program will ignore special characters for both the word and phrase inputs. The program will ignore whitespaces for the word input, but not the phrase input (whitespaces are used to delimit each word). Both inputs are handled case insensitively.
+This program will prompt the user to enter a word. The program will then prompt the user to enter a string and will display how many times the word they entered appears in the string. The program will ignore special characters for both the word and phrase inputs. The program will ignore whitespaces for the word input, but not the phrase input (whitespaces are used to delimit each word). Both inputs are handled case insensitively. Additionally, the program offers advanced detection and reporting of all unique word occurences found in an inputted phrase.
 
 ## Specs
 
@@ -24,6 +24,7 @@ This program will prompt the user to enter a word. The program will then prompt 
 | Check word for special characters | food | *no special characters exist* | Remove any non-word characters that would break the search algorithm. Difficult to implement |
 | Check each word in the phrase for special characters | Food is great | *whitespace characters exist* | Remove any non-word characters that would break the search algorithm. Difficult to implement | 
 | If special characters are found, handle them | Food is great! | *leave whitespace as delimiter, remove '!'* | Validation required to support search algorithm. Difficult to implement |
+| Search phrase for multiple single word occurences and update a dictionary value for each occurence | Food is great. I love food | *'Food' was found 2 times* | Incrementing a dictionary and reporting the occurences is required program functionality. Difficult to implement |
 
 
 ## Setup on OSX / Windows
