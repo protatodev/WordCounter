@@ -43,6 +43,7 @@ This program will prompt the user to enter a word. The program will then prompt 
 ## Technologies Used
 
 * .Net Core 1.1.4
+* MSTest
 
 ## Links
 
