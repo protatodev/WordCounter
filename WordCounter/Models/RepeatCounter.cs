@@ -13,5 +13,16 @@ namespace WordCounter.Models
 
             return validInput;
         }
+
+        public string removeSpecialCharacters(string input)
+        {
+            char[] letterArray = input.ToCharArray();
+
+            letterArray = Array.FindAll<char>(letterArray, (c => (char.IsLetterOrDigit(c) || c == '-')));
+
+            input = new string(letterArray);
+
+            return input;
+        }
     }
 }

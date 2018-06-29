@@ -8,13 +8,6 @@ namespace WordCounter.Tests
     [TestClass]
     public class RepeatCounterTest
     {
-        string word = "";
-
-        [TestMethod]
-        public string GetWord()
-        {
-            return word;
-        }
 
         [TestMethod]
         public void checkSpecialCharacters_CheckIfTrue_True()
@@ -24,9 +17,10 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void removeSpecialCharacters()
+        public void removeSpecialCharacters_EnsureRemoved()
         {
-      
+            RepeatCounter repeat = new RepeatCounter();
+            Assert.AreEqual("word", repeat.removeSpecialCharacters("word!!!    &&&%%##@ "));
         }
     }
 }
