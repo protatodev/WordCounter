@@ -43,14 +43,19 @@ namespace WordCounter.Models
             return wordArray;
         }
 
-        public int CountOccurences(string[] words)
+        public int CountOccurences(string word, string[] words)
         {
             int occurences = 0;
 
             for(int i = 0; i < words.Length; i++)
             {
-
+                if(words[i] == word)
+                {
+                    occurences++;
+                }
             }
+
+            return occurences;
         }
     }
 }

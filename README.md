@@ -13,6 +13,7 @@ This program will prompt the user to enter a word. The program will then prompt 
 | Behavior | Input | Output | Why |
 |----------|-------|--------|-----|
 | Prompt user to enter a word | Food | *Food* | Simple input gathering is the first step in the program |
+| Convert word to lowercase | FOOD | food | Necessary for comparison of individual words |
 | Check to ensure word is a string | Food | *word is a string* | Necessary to ensure valid input |
 | Check word for special characters | Food | *no special characters exist* | Remove any non-word characters that would break the search algorithm |
 | Prompt user to enter a string of words | Food is great | *Food is great* | Simple input gathering for the phrase to check |
@@ -20,6 +21,7 @@ This program will prompt the user to enter a word. The program will then prompt 
 | Check each word in the phrase for special characters | Food is great | *whitespace characters exist* | Remove any non-word characters that would break the search algorithm | 
 | If special characters are found, handle them | Food is great! | *set whitespace as delimiter, remove '!'* | Validation required to support search algorithm |
 | Allow for numerical characters | Food is great! 123 | *Read '123' as if it were a string* | User may enter '5' instead of 'five' |
+| Convert phrase to lowercase | Food is gReAt | food is great | Necessary for comparison of individual words |
 | Search each word for multiple occurences and update a counter for each occurence | Food is great | *'Food' was found 1 time* | Incrementing a counter and reporting the occurences is required program functionality |
 | Display findings to the user | Food is great | The word Food was found 1 time(s) in the phrase you entered. | This report is required for program functionality |
 

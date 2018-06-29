@@ -36,5 +36,14 @@ namespace WordCounter.Tests
             RepeatCounter repeat = new RepeatCounter();
             Assert.AreEqual("this", repeat.SplitPhrase("this is a great word phrase")[0]);
         }
+
+        [TestMethod]
+        public void CountOccurences_DisplayTimesWordIsFound_NumberOfTimes()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            string word = "day";
+            string[] phrase = repeat.SplitPhrase("this is a great day");
+            Assert.AreEqual(1, repeat.CountOccurences(word, phrase));
+        }
     }
 }
