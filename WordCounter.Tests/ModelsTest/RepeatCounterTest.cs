@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 using WordCounter.Models;
 
 namespace WordCounter.Tests
@@ -60,6 +61,18 @@ namespace WordCounter.Tests
             string word = "day";
             string[] phrase = repeat.SplitPhrase("this is a great day day day day day");
             Assert.AreEqual(5, repeat.CountOccurences(word, phrase));
+        }
+
+        [TestMethod]
+        public void CountOccurence_PhraseWords_NumberOfTimesPerWord()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            string[] phrase = repeat.GetInputtedPhrase();
+            Dictionary<string, int> phraseDictionary = repeat.GetUniquePhraseWordCount(phrase);
+            string word1 = repeat.GetPhraseKeys(phraseDictionary)[0];
+            int word1Count = repeat.GetPhraseWordCounts(phraseDictionary)[0];
+            Assert.AreEqual("this", word1);
+            Assert.AreEqual(3, word1Count);
         }
     }
 }

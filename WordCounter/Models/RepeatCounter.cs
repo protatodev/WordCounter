@@ -14,7 +14,7 @@ namespace WordCounter.Models
 
         public string[] GetInputtedPhrase()
         {
-            return SplitPhrase("this is a phrase");
+            return SplitPhrase("this this this is a phrase");
         }
 
         public bool CheckSpecialCharacters(string input)
