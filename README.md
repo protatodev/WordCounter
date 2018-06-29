@@ -2,11 +2,11 @@
 
 #### Epicodus C# Week 1 Word Counter Project, 6.29.2018
 
-#### By Protatodev
+#### By Protatodev (Thad Donaghue)
 
 ## Description
 
-This program will prompt the user to enter a word. The program will then prompt the user to enter a string and will display how many times the word they entered appears in the string.
+This program will prompt the user to enter a word. The program will then prompt the user to enter a string and will display how many times the word they entered appears in the string. The program will ignore special characters for both the word and phrase inputs. The program will ignore whitespaces for the word input, but not the phrase input (whitespaces are used to delimit each word). Both inputs are handled case insensitively.
 
 ## Specs
 
@@ -26,12 +26,12 @@ This program will prompt the user to enter a word. The program will then prompt 
 | Display findings to the user | Food is great | The word Food was found 1 time(s) in the phrase you entered. | This report is required for program functionality |
 
 
-## Setup on OSX
+## Setup on OSX / Windows
 
 * Download and install .Net Core 1.1.4
 * Download and install Mono
 * Clone the repo
-* Run `dotnet restore` from within the project directory
+* Run `dotnet restore` from within the project directory using PowerShell / Terminal
 
 ## Contribution Requirements
 
@@ -47,6 +47,8 @@ This program will prompt the user to enter a word. The program will then prompt 
 ## Links
 
 * https://github.com/protatodev/WordCounter
+* https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.1.4-download.md
+* https://www.mono-project.com/
 
 ## License
 

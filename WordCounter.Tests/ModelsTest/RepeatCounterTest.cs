@@ -42,8 +42,8 @@ namespace WordCounter.Tests
         {
             RepeatCounter repeat = new RepeatCounter();
             string word = "day";
-            string[] phrase = repeat.SplitPhrase("this is a great day");
-            Assert.AreEqual(1, repeat.CountOccurences(word, phrase));
+            string[] phrase = repeat.SplitPhrase("this is a great day day day day day");
+            Assert.AreEqual(5, repeat.CountOccurences(word, phrase));
         }
     }
 }
