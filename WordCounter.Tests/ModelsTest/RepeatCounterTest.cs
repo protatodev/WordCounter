@@ -21,6 +21,7 @@ namespace WordCounter.Tests
         {
             RepeatCounter repeat = new RepeatCounter();
             string word = repeat.GetInputtedWord();
+            Assert.AreEqual("word", repeat.GetInputtedWord());
         }
 
         [TestMethod]
@@ -28,6 +29,7 @@ namespace WordCounter.Tests
         {
             RepeatCounter repeat = new RepeatCounter();
             string[] phrase = repeat.GetInputtedPhrase();
+            Assert.AreEqual("this", repeat.GetInputtedPhrase()[0]);
         }
 
         [TestMethod]

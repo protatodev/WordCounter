@@ -84,6 +84,9 @@ namespace WordCounter.Models
                 }
             }
 
+            List<string> keys = wordCount.Keys.ToList<string>();
+            List<int> values = wordCount.Values.ToList<int>();
+
             return wordCount;
         }
     }
