@@ -17,6 +17,20 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
+        public void GetInputtedWord_GetInputtedWordString()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            string word = repeat.GetInputtedWord();
+        }
+
+        [TestMethod]
+        public void CheckInputtedPhrase_GetPhraseString()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            string[] phrase = repeat.GetInputtedPhrase();
+        }
+
+        [TestMethod]
         public void RemoveSpecialCharacters_EnsureRemoved()
         {
             RepeatCounter repeat = new RepeatCounter();

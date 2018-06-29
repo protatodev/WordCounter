@@ -7,6 +7,16 @@ namespace WordCounter.Models
 {
     public class RepeatCounter
     {
+        public string GetInputtedWord()
+        {
+            return "word";
+        }
+
+        public string[] GetInputtedPhrase()
+        {
+            return SplitPhrase("this is a phrase");
+        }
+
         public bool CheckSpecialCharacters(string input)
         {
             bool validInput = input.All(Char.IsLetter);
@@ -56,6 +66,25 @@ namespace WordCounter.Models
             }
 
             return occurences;
+        }
+
+        public Dictionary<string, int> GetUniquePhraseWordCount(string[] words)
+        {
+            Dictionary<string, int> wordCount = new Dictionary<string, int>() { };
+
+            foreach(string word in words)
+            {
+                if(wordCount.ContainsKey(word))
+                {
+                    wordCount[word] += 1;
+                } 
+                else
+                {
+                    wordCount.Add(word, 1);
+                }
+            }
+
+            return wordCount;
         }
     }
 }
