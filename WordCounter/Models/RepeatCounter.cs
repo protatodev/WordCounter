@@ -84,10 +84,21 @@ namespace WordCounter.Models
                 }
             }
 
+            return wordCount;
+        }
+
+        public List<string> GetPhraseKeys(Dictionary<string, int> wordCount)
+        {
             List<string> keys = wordCount.Keys.ToList<string>();
+
+            return keys;
+        }
+
+        public List<int> GetPhraseWordCounts(Dictionary<string, int> wordCount)
+        {
             List<int> values = wordCount.Values.ToList<int>();
 
-            return wordCount;
+            return values;
         }
     }
 }
