@@ -13,14 +13,21 @@ namespace WordCounter.Tests
         public void checkSpecialCharacters_CheckIfTrue_True()
         {
             RepeatCounter repeat = new RepeatCounter();
-            Assert.AreEqual(true, repeat.checkSpecialCharacters("word"));
+            Assert.AreEqual(true, repeat.CheckSpecialCharacters("word is a good word"));
         }
 
         [TestMethod]
         public void removeSpecialCharacters_EnsureRemoved()
         {
             RepeatCounter repeat = new RepeatCounter();
-            Assert.AreEqual("word", repeat.removeSpecialCharacters("word!!!    &&&%%##@ "));
+            Assert.AreEqual("word123", repeat.RemoveSpecialCharacters("word!!!&&&123%%##@"));
+        }
+
+        [TestMethod]
+        public void removeWhiteSpace_EnsureRemoved()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            Assert.AreEqual("word123", repeat.RemoveWhiteSpace("word   123"));
         }
     }
 }

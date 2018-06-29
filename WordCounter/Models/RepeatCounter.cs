@@ -7,18 +7,29 @@ namespace WordCounter.Models
 {
     public class RepeatCounter
     {
-        public bool checkSpecialCharacters(string input)
+        public bool CheckSpecialCharacters(string input)
         {
             bool validInput = input.All(Char.IsLetter);
 
             return validInput;
         }
 
-        public string removeSpecialCharacters(string input)
+        public string RemoveSpecialCharacters(string input)
         {
             char[] letterArray = input.ToCharArray();
 
-            letterArray = Array.FindAll<char>(letterArray, (c => (char.IsLetterOrDigit(c) || c == '-')));
+            letterArray = Array.FindAll<char>(letterArray, (c => (char.IsLetterOrDigit(c) || char.IsWhiteSpace(c) || c == '-')));
+
+            input = new string(letterArray);
+
+            return input;
+        }
+
+        public string RemoveWhiteSpace(string input)
+        {
+            char[] letterArray = input.ToCharArray();
+
+            letterArray = Array.FindAll<char>(letterArray, (c => !char.IsWhiteSpace(c)));
 
             input = new string(letterArray);
 
