@@ -35,5 +35,22 @@ namespace WordCounter.Models
 
             return input;
         }
+
+        public string[] SplitPhrase(string input)
+        {
+            string[] wordArray = input.Split(" ");
+
+            return wordArray;
+        }
+
+        public int CountOccurences(string[] words)
+        {
+            int occurences = 0;
+
+            for(int i = 0; i < words.Length; i++)
+            {
+
+            }
+        }
     }
 }

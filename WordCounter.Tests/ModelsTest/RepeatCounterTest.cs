@@ -10,24 +10,31 @@ namespace WordCounter.Tests
     {
 
         [TestMethod]
-        public void checkSpecialCharacters_CheckIfTrue_True()
+        public void CheckSpecialCharacters_CheckIfTrue_True()
         {
             RepeatCounter repeat = new RepeatCounter();
-            Assert.AreEqual(true, repeat.CheckSpecialCharacters("word is a good word"));
+            Assert.AreEqual(false, repeat.CheckSpecialCharacters("word is a good word"));
         }
 
         [TestMethod]
-        public void removeSpecialCharacters_EnsureRemoved()
+        public void RemoveSpecialCharacters_EnsureRemoved()
         {
             RepeatCounter repeat = new RepeatCounter();
-            Assert.AreEqual("word123", repeat.RemoveSpecialCharacters("word!!!&&&123%%##@"));
+            Assert.AreEqual("word is great how", repeat.RemoveSpecialCharacters("word is!! great&& how!@"));
         }
 
         [TestMethod]
-        public void removeWhiteSpace_EnsureRemoved()
+        public void RemoveWhiteSpace_EnsureRemoved()
         {
             RepeatCounter repeat = new RepeatCounter();
             Assert.AreEqual("word123", repeat.RemoveWhiteSpace("word   123"));
+        }
+
+        [TestMethod]
+        public void SplitPhrase_MakeStringArray_ReturnsArray()
+        {
+            RepeatCounter repeat = new RepeatCounter();
+            Assert.AreEqual("this", repeat.SplitPhrase("this is a great word phrase")[0]);
         }
     }
 }
