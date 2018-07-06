@@ -7,14 +7,27 @@ namespace WordCounter.Models
 {
     public class RepeatCounter
     {
+        public string word = "";
+        public string phrase = "";
+        public static List<string> words = new List<string>() { };
+        public static List<string> phrases = new List<string>() { };
+        public static List<int> counts = new List<int>() { };
+
         public string GetInputtedWord()
         {
-            return "word";
+            return word;
         }
 
-        public string[] GetInputtedPhrase()
+        public string GetInputtedPhrase()
         {
-            return SplitPhrase("this this this is a phrase");
+            return phrase;
+        }
+
+        public void SaveSearch(string word, string phrase, int count)
+        {
+            words.Add(word);
+            phrases.Add(phrase);
+            counts.Add(count);
         }
 
         public bool CheckSpecialCharacters(string input)
