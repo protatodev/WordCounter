@@ -31,5 +31,12 @@ namespace WordCounter.Controllers
         {
             return View();
         }
+
+        [HttpGet("/results/{id}")]
+        public ActionResult Item(int id)
+        {
+            RepeatCounter repeat = RepeatCounter.searches[id];
+            return View(repeat);
+        }
     }
 }
