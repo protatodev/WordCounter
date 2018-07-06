@@ -1,5 +1,6 @@
 ﻿body {
     text-align: center;
+    background-color: #fffdf4;
 }
 
 img {
@@ -11,7 +12,7 @@ img {
 }
 
 .words:hover {
-    background-color: beige;
+    background-color: #f2f7ff;
     transition: 1s;
     border: 2px solid black;
 }

@@ -7,13 +7,14 @@
         <div class="card">
             <img class="card-img-top" src="https://images.hellogiggles.com/uploads/2018/04/14112208/scrabble-dictionary-new-words-e1523730173132.jpg">
             <div class="card-body">
-                <h3 class="card-title">PREVIOUS SEARCH DETAILS</h3>
+                
                 @{
                     var word = Model.word;
                     var phrase = Model.phrase;
                     var count = Model.counts;
 
                     <div class="words">
+                        <h3 class="card-title">PREVIOUS SEARCH DETAILS</h3>
                         <p>Your Word: <strong>@word</strong></p>
                         <p>Your Phrase: @phrase</p>
                         <p>Your word was found @count times.</p>
