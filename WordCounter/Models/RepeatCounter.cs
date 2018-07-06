@@ -48,7 +48,7 @@ namespace WordCounter.Models
 
         public string[] SplitPhrase(string input)
         {
-            string[] wordArray = input.Split(" ");
+            string[] wordArray = input.Split(' ');
 
             return wordArray;
         }

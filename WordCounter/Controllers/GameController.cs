@@ -5,10 +5,10 @@ using WordCounter.Models;
 
 namespace WordCounter.Controllers
 {
-    public class HomeController : Controller
+    public class GameController : Controller
     {
-        [HttpGet("/")]
-        public ActionResult Index()
+        [HttpGet("/form")]
+        public ActionResult Form()
         {
             return View();
         }
