@@ -13,9 +13,11 @@
                     var phrase = Model.phrase;
                     var count = Model.counts;
 
-                    <p>Your Word: @word</p>
-                    <p>Your Phrase: @phrase</p>
-                    <p>Your word was found @count times.</p>
+                    <div class="words">
+                        <p>Your Word: <strong>@word</strong></p>
+                        <p>Your Phrase: @phrase</p>
+                        <p>Your word was found @count times.</p>
+                    </div>
                 }
                 <a class="btn btn-primary" href="/" role="button">Play Again</a>
             </div>

@@ -14,17 +14,21 @@
                     var phrase = Model[index].GetInputtedPhrase();
                     var count = Model[index].CountOccurences(word, Model[index].SplitPhrase(phrase));
 
-                    <p>Your Word: @word</p>
-                    <p>Your Phrase: @phrase</p>
-                    <p>Your word was found @count times.</p>
-                    <hr /><br />
+                    <div class="words">
+                        <p>Your Word: @word</p>
+                        <p>Your Phrase: @phrase</p>
+                        <p>Your word was found @count times.</p>
+                        <hr /><br />
+                    </div>
 
                     <h4>Your Search History</h4>
                     for(int i = 0; i < Model.Count; i++)
                     {
-                        <p>Word: @Model[i].word</p>
-                        <a href="/results/@i">See Details</a>
-                        <hr /><br />
+                        <div class="words">
+                            <p>Word: @Model[i].word</p>
+                            <a href="/results/@i">See Details</a>
+                            <hr /><br />
+                        </div>
                     }
                 }
                 <a class="btn btn-primary" href="/" role="button">Play Again</a>

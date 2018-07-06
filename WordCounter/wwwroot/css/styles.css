@@ -1,3 +1,17 @@
 ﻿body {
     text-align: center;
 }
+
+img {
+    height: 300px;
+}
+
+.words {
+    transition: 1s;
+}
+
+.words:hover {
+    background-color: beige;
+    transition: 1s;
+    border: 2px solid black;
+}
