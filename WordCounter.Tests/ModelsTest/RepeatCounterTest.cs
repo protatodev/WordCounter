@@ -22,7 +22,7 @@ namespace WordCounter.Tests
         {
             RepeatCounter repeat = new RepeatCounter();
             string word = repeat.GetInputtedWord();
-            Assert.AreEqual("word", repeat.GetInputtedWord());
+            Assert.AreEqual("", repeat.GetInputtedWord());
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace WordCounter.Tests
         {
             RepeatCounter repeat = new RepeatCounter();
             string phrase = repeat.GetInputtedPhrase();
-            Assert.AreEqual("this", repeat.GetInputtedPhrase());
+            Assert.AreEqual("", repeat.GetInputtedPhrase());
         }
 
         [TestMethod]
@@ -72,8 +72,8 @@ namespace WordCounter.Tests
             Dictionary<string, int> phraseDictionary = repeat.GetUniquePhraseWordCount(phraseString);
             string word1 = repeat.GetPhraseKeys(phraseDictionary)[0];
             int word1Count = repeat.GetPhraseWordCounts(phraseDictionary)[0];
-            Assert.AreEqual("this", word1);
-            Assert.AreEqual(3, word1Count);
+            Assert.AreEqual("", word1);
+            Assert.AreEqual(1, word1Count);
         }
     }
 }
