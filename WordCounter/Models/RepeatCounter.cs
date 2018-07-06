@@ -9,9 +9,13 @@ namespace WordCounter.Models
     {
         public string word = "";
         public string phrase = "";
-        public static List<string> words = new List<string>() { };
-        public static List<string> phrases = new List<string>() { };
-        public static List<int> counts = new List<int>() { };
+        public int counts = 0;
+        public static List<RepeatCounter> searches = new List<RepeatCounter>() { };
+
+        public RepeatCounter()
+        {
+            searches.Add(this);
+        }
 
         public string GetInputtedWord()
         {
@@ -21,13 +25,6 @@ namespace WordCounter.Models
         public string GetInputtedPhrase()
         {
             return phrase;
-        }
-
-        public void SaveSearch(string word, string phrase, int count)
-        {
-            words.Add(word);
-            phrases.Add(phrase);
-            counts.Add(count);
         }
 
         public bool CheckSpecialCharacters(string input)

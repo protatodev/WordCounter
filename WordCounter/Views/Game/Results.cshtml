@@ -7,24 +7,25 @@
         <div class="card">
             <img class="card-img-top" src="https://images.hellogiggles.com/uploads/2018/04/14112208/scrabble-dictionary-new-words-e1523730173132.jpg">
             <div class="card-body">
-                <h5 class="card-title">RESULTS</h5>
+                <h3 class="card-title">RESULTS</h3>
                 @{ 
-                    var word = Model.GetInputtedWord();
-                    var phrase = Model.GetInputtedPhrase();
-                    var count = Model.CountOccurences(word, Model.SplitPhrase(phrase));
+                    var index = (Model.Count - 1);
+                    var word = Model[index].GetInputtedWord();
+                    var phrase = Model[index].GetInputtedPhrase();
+                    var count = Model[index].CountOccurences(word, Model[index].SplitPhrase(phrase));
 
                     <p>Your Word: @word</p>
                     <p>Your Phrase: @phrase</p>
                     <p>Your word was found @count times.</p>
-                    <hr />
+                    <hr /><br />
 
                     <h4>Your Search History</h4>
-                    for(int i = 0; i < Model.words.Length; i++)
+                    for(int i = 0; i < Model.Count; i++)
                     {
-                        <p>Word: @Model.words[i]</p>
-                        <p>Search Phrase: @Model.phrases[i]</p>
-                        <p>Count: @Model.counts[i]</p>
-                        <hr />
+                        <p>Word: @Model[i].word</p>
+                        <p>Search Phrase: @Model[i].phrase</p>
+                        <p>Count: @Model[i].counts</p>
+                        <hr /><br />
                     }
                 }
                 <a class="btn btn-primary" href="/" role="button">Play Again</a>

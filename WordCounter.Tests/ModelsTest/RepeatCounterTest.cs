@@ -29,8 +29,8 @@ namespace WordCounter.Tests
         public void CheckInputtedPhrase_GetPhraseString()
         {
             RepeatCounter repeat = new RepeatCounter();
-            string[] phrase = repeat.GetInputtedPhrase();
-            Assert.AreEqual("this", repeat.GetInputtedPhrase()[0]);
+            string phrase = repeat.GetInputtedPhrase();
+            Assert.AreEqual("this", repeat.GetInputtedPhrase());
         }
 
         [TestMethod]
@@ -67,8 +67,9 @@ namespace WordCounter.Tests
         public void CountOccurence_PhraseWords_NumberOfTimesPerWord()
         {
             RepeatCounter repeat = new RepeatCounter();
-            string[] phrase = repeat.GetInputtedPhrase();
-            Dictionary<string, int> phraseDictionary = repeat.GetUniquePhraseWordCount(phrase);
+            string phrase = repeat.GetInputtedPhrase();
+            string[] phraseString = phrase.Split(' ');
+            Dictionary<string, int> phraseDictionary = repeat.GetUniquePhraseWordCount(phraseString);
             string word1 = repeat.GetPhraseKeys(phraseDictionary)[0];
             int word1Count = repeat.GetPhraseWordCounts(phraseDictionary)[0];
             Assert.AreEqual("this", word1);

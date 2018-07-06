@@ -22,7 +22,8 @@ namespace WordCounter.Controllers
             repeat.phrase = repeat.RemoveSpecialCharacters(repeat.phrase);
             repeat.word = repeat.RemoveSpecialCharacters(repeat.word);
             repeat.word = repeat.RemoveWhiteSpace(repeat.word);
-            return View("Results", repeat);
+            repeat.counts = repeat.CountOccurences(repeat.word, repeat.SplitPhrase(repeat.phrase));
+            return View("Results", RepeatCounter.searches);
         }
 
         [HttpGet("/results")]
