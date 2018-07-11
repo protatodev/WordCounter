@@ -12,8 +12,10 @@ namespace WordCounter.Models
         public int counts = 0;
         public static List<RepeatCounter> searches = new List<RepeatCounter>() { };
 
-        public RepeatCounter()
+        public RepeatCounter(string targetWord, string targetPhrase)
         {
+            word = RemoveWhiteSpace(RemoveSpecialCharacters(targetWord));
+            phrase = RemoveSpecialCharacters(targetPhrase);
             searches.Add(this);
         }
 
@@ -56,15 +58,16 @@ namespace WordCounter.Models
             return input;
         }
 
-        public string[] SplitPhrase(string input)
+        public string[] SplitPhrase()
         {
-            string[] wordArray = input.Split(' ');
+            string[] wordArray = phrase.Split(' ');
 
             return wordArray;
         }
 
-        public int CountOccurences(string word, string[] words)
+        public int CountOccurences(string[] words)
         {
+
             int occurences = 0;
 
             for(int i = 0; i < words.Length; i++)
@@ -87,7 +90,7 @@ namespace WordCounter.Models
                 if(wordCount.ContainsKey(word))
                 {
                     wordCount[word] += 1;
-                } 
+                }
                 else
                 {
                     wordCount.Add(word, 1);
